@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/cmecmetrics/cmec-driver/archive/refs/tags/{{ version }}.tar.gz
-  sha256: abb477f7c43b6ffe9ead0456b4c56448f11a2093f5fae9590fd22beb81959f20
+  sha256: 4abb11659e37f34ca8d80c9b6bb3fd40a9fb5cabf4792c62d9723b18ae87f647
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
   entry_points:
-    - cmec-driver = cmec_driver:main
+    - cmec-driver = cmec_driver.cmec_driver:main
 
 requirements:
   host:
