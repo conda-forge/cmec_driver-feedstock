@@ -1,5 +1,5 @@
 {% set name = "cmec_driver" %}
-{% set version = "1.0.0a5" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,21 @@ package:
 
 source:
   url: https://github.com/cmecmetrics/cmec-driver/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 5620acc7787b155c4f7c3e5922681e958528f23dd41170a28c7dbb90771fe184
+  sha256: 4abb11659e37f34ca8d80c9b6bb3fd40a9fb5cabf4792c62d9723b18ae87f647
 
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
   entry_points:
-    - cmec-driver = cmec_driver:main
+    - cmec-driver = cmec_driver.cmec_driver:main
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
