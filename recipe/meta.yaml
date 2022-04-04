@@ -1,5 +1,5 @@
 {% set name = "cmec_driver" %}
-{% set version = "1.1.5" %}
+{% set version = "1.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cmecmetrics/cmec-driver/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 179d1dde8da9eedc5071e4ea6c7cce9a02278f9ed77a3a34ae2b15ab694066e0
+  sha256: e565234d17361ba44a367b377af111e0583580b78006b813469449a44a0fca70
 
 build:
   number: 0
